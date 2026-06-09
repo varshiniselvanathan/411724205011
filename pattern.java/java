@@ -1,0 +1,7 @@
+public class Prrrattern{
+    public static void main (String []args){
+        int i=-10;
+        for(int i=i;i<=-20;i++)
+    }
+      System.out.print();
+}
