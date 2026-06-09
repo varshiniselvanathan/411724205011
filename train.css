@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     color:rgb(0, 128, 102);
     background-color: rgb(0, 0, 0);
@@ -82,3 +83,65 @@ nav{
         grid-template-columns:33% 33% 33%;
     }
 }
+=======
+body{
+    color:green;
+    background-color: black;
+}
+/* p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    font-style:italic;
+} */
+img{
+    height: 500px;
+    width: 500px;
+    border-radius: 500px;
+}
+video{
+    height: 500px;
+}
+ol{
+    list-style-type: lower-roman;
+}
+ul{
+    list-style-type: square;
+}
+h1{
+    padding: 50px;
+    border: 1px solid rgb(0, 17, 255);
+    margin: 50px;
+}
+button{
+    background-color: aqua;
+    padding: 10px;
+    margin: 20px;
+}
+button:hover{
+    background-color: blueviolet;
+
+}
+table, th, td{
+    border: ipx solid white;
+    border-collapse: collapse;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+#p1{
+    font-style: italic;
+}
+#p2{
+    font-style: normal;
+}
+.group{
+    font-size xx-large;
+}
+.grid{
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
+}
+>>>>>>> 1749b67a0fffb37497ca71e77edb3efee7a917b0
