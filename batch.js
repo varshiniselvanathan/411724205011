@@ -36,5 +36,9 @@ const ptag = DocumentFragment.createElement("h1")
 ptag.textContent = "Some text"
 Document.body.appendChild(ptag)
 
+ptag.remove(
+    
+)
+
 
 
