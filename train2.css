@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* Navbar */
+
+nav{
+
+    display:flex;
+    flex-direction:column;
+    background:rgb(0, 208, 255)
+    padding:15px;
+
+}
+
+
+nav a{
+
+    text-decoration:none;
+    padding:10px;
+
+}
+
+
+
+/* Desktop Navbar */
+
+@media(min-width:768px){
+
+    nav{
+
+        flex-direction:row;
+        gap:30px;
+
+    }
+
+}
+
+
+/* Heading */
+
+h1{
+
+    padding:20px;
+
+}
+
+
+
+/* Image */
+
+img{
+
+    width:300px;
+    border-radius:20px;
+
+}
+
+
+
+/* Video */
+
+video{
+
+    width:50vw;
+    padding:20px;
+    background:blue;
+
+}
+
+
+
+/* Table */
+
+table{
+
+    border-collapse:collapse;
+    margin:20px;
+
+}
+
+
+th,td{
+
+    border:1px solid black;
+    padding:10px;
+
+}
+
+
+
+/* Button */
+
+button{
+
+    border:none;
+    padding:15px;
+    margin:20px;
+    background:blue;
+    color:white;
+    cursor:pointer;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.1);
+
+}
+
+
+
+/* Grid */
+
+.grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    padding:20px;
+
+}
+
+
+.grid div{
+
+    background:lightblue;
+    padding:30px;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:767px){
+
+    .grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
