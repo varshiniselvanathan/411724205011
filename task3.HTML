@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message App</title>
+</head>
+<body>
+
+    <h1>Message App</h1>
+
+    <input type="text" id="msgInput" placeholder="Enter message">
+
+    <button id="addBtn">Add Message</button>
+    <button id="clearBtn">Clear All Messages</button>
+
+    <p id="count">Characters: 0</p>
+    <p id="status"></p>
+
+    <div id="messages"></div>
+
+    <script>
+
+        let messages = [];
+
+        const input = document.getElementById("msgInput");
+        const count = document.getElementById("count");
+        const status = document.getElementById("status");
+        const container = document.getElementById("messages");
+
+        
+        input.addEventListener("input", function () {
+            count.textContent = "Characters: " + input.value.length;
+        });
+
+        document.getElementById("addBtn").addEventListener("click", function () {
+
+            let msg = input.value;
+
+            let promise = new Promise((resolve, reject) => {
+
+                if (msg.length >= 3) {
+                    resolve(msg);
+                } else {
+                    reject("Message must contain at least 3 characters");
+                }
+
+            });
+
+            promise
+                .then(function (message) {
+
+                    status.textContent = "Message Added Successfully";
+
+                    messages.push(message);
+
+                    displayMessages();
+
+                    input.value = "";
+                    count.textContent = "Characters: 0";
+
+                })
+                .catch(function (error) {
+                    status.textContent = error;
+                });
+
+        });
+
+        function displayMessages() {
+
+            container.innerHTML = "";
+
+            messages.forEach(function (msg) {
+
+                let p = document.createElement("p");
+                p.textContent = msg;
+
+                container.appendChild(p);
+
+                setTimeout(function () {
+
+                    p.remove();
+
+                    let index = messages.indexOf(msg);
+
+                    if (index !== -1) {
+                        messages.splice(index, 1);
+                    }
+
+                    status.textContent = "Message Expired";
+
+                }, 10000);
+
+            });
+
+        }
+
+        document.getElementById("clearBtn").addEventListener("click", function () {
+
+            messages = [];
+
+            container.innerHTML = "";
+
+            status.textContent = "All Messages Cleared";
+
+        });
+
+    </script>
+
+</body>
+</html>
